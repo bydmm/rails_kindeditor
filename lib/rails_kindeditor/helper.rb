@@ -33,6 +33,7 @@ module RailsKindeditor
     end
 
     def get_options(options)
+      options.reverse_merge!(:items => RailsKindeditor.items)
       options.delete(:editor_id)
       options.delete(:window_onload)
       options.reverse_merge!(:width => '100%')
